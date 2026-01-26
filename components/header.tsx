@@ -84,7 +84,7 @@ export function Header() {
           </div>
 
           {/* Main Navigation */}
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-16 md:h-26">
             {/* Logo */}
             <Link
               href="/"
@@ -93,9 +93,9 @@ export function Header() {
               <Image
                 src="/logo.png"
                 alt="HeroLiveTV"
-                width={180}
-                height={50}
-                className="h-8 md:h-10 w-auto"
+                width={280}
+                height={70}
+                className="h-12 md:h-16 w-auto"
                 priority
               />
             </Link>

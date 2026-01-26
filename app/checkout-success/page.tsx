@@ -159,7 +159,7 @@ function CheckoutSuccessContent() {
             <Button
               asChild
               variant="outline"
-              className="h-12 px-8 text-base font-semibold border-gray-300 text-gray-700 hover:bg-gray-50"
+              className="h-12 px-8 text-base font-semibold border-gray-300 text-gray-700 hover:bg-gray-50 text-white"
             >
               <Link href="/">
                 Back to Home
