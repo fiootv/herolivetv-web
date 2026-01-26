@@ -93,25 +93,25 @@
 
 @layer utilities {
   .text-primary {
-    color: #ef2828;
+    color: #FF6B35;
   }
   .bg-primary {
-    background-color: #ef2828;
+    background-color: #FF6B35;
   }
   .border-primary {
-    border-color: #ef2828;
+    border-color: #FF6B35;
   }
   .hover\:text-primary:hover {
-    color: #ef2828;
+    color: #FF6B35;
   }
   .hover\:bg-primary:hover {
-    background-color: #dc2626;
+    background-color: #e65a2b;
   }
   .hover\:border-primary:hover {
-    border-color: #ef2828;
+    border-color: #FF6B35;
   }
   .active\:bg-primary:active {
-    background-color: #b91c1c;
+    background-color: #cc4a21;
   }
 }
 

@@ -95,7 +95,7 @@ export function HeroSection() {
           {/* Left Section - Text Content */}
           <div className="text-white space-y-8 text-center lg:text-left">
             <p className="text-primary text-sm md:text-base font-medium uppercase tracking-wider">
-              WELCOME TO FIOO TV
+              WELCOME TO HEROLIVETV
             </p>
             
             <h1 className="text-5xl md:text-5xl lg:text-6xl xl:text-[80px] font-semibold leading-tight">

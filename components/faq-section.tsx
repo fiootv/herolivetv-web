@@ -7,24 +7,24 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
-    question: "What is fiootv?",
+    question: "What is HeroLiveTV?",
     answer:
-      "fiootv is a comprehensive entertainment service that provides access to a vast library of on-demand content, including movies, series, documentaries, and more, across multiple languages and genres.",
+      "HeroLiveTV is a comprehensive entertainment service that provides access to a vast library of on-demand content, including movies, series, documentaries, and more, across multiple languages and genres.",
   },
   {
-    question: "What devices are compatible with fiootv?",
+    question: "What devices are compatible with HeroLiveTV?",
     answer:
-      "fiootv is compatible with a wide range of devices including smart TVs, smartphones, tablets, streaming boxes, and computers. You can access your favorite content on any device that supports our platform.",
+      "HeroLiveTV is compatible with a wide range of devices including smart TVs, smartphones, tablets, streaming boxes, and computers. You can access your favorite content on any device that supports our platform.",
   },
   {
-    question: "How can I start using fiootv?",
+    question: "How can I start using HeroLiveTV?",
     answer:
-      "Getting started with fiootv is easy! Simply sign up for an account, choose a subscription plan that suits your needs, and follow our quick setup guide. You'll be streaming your favorite content in no time.",
+      "Getting started with HeroLiveTV is easy! Simply sign up for an account, choose a subscription plan that suits your needs, and follow our quick setup guide. You'll be streaming your favorite content in no time.",
   },
   {
     question: "What are the subscription plans available?",
     answer:
-      "fiootv offers flexible subscription plans designed to fit different needs and budgets. We provide various options with different features and content access levels. You can upgrade or change your plan at any time.",
+      "HeroLiveTV offers flexible subscription plans designed to fit different needs and budgets. We provide various options with different features and content access levels. You can upgrade or change your plan at any time.",
   },
   {
     question: "What internet speed is recommended for streaming?",
@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "Can I access content in multiple languages?",
     answer:
-      "Yes! fiootv offers content in multiple languages including English, Hindi, regional languages like Punjabi and Bengali, and international languages such as Turkish and Arabic. We cater to a global audience with diverse language options.",
+      "Yes! HeroLiveTV offers content in multiple languages including English, Hindi, regional languages like Punjabi and Bengali, and international languages such as Turkish and Arabic. We cater to a global audience with diverse language options.",
   },
 ];
 
@@ -63,7 +63,7 @@ export function FAQSection() {
         >
           <Image
             src="https://images.unsplash.com/photo-1692188071339-2825a8a997f1?w=800&h=1200&fit=crop"
-            alt="Happy customers enjoying fiootv"
+            alt="Happy customers enjoying HeroLiveTV"
             fill
             className="object-cover"
             priority

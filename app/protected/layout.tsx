@@ -14,7 +14,7 @@ export default function ProtectedLayout({
         <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16 sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
           <div className="w-full max-w-5xl flex justify-between items-center p-3 px-5 text-sm">
             <Link href={"/"} className="font-bold text-xl">
-              FiooTV
+              HeroLiveTV
             </Link>
             {hasEnvVars && (
               <Suspense>
@@ -28,7 +28,7 @@ export default function ProtectedLayout({
         </div>
 
         <footer className="w-full flex items-center justify-center border-t mx-auto text-center text-xs gap-8 py-16">
-          <p>© Copyright 2025 Fioo TV</p>
+          <p>© Copyright 2025 HeroLiveTV</p>
         </footer>
       </div>
     </main>

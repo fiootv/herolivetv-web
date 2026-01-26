@@ -21,7 +21,7 @@ export function CTABannerSection() {
           {/* Main headline */}
           <h2 className="text-3xl md:text-5xl font-semibold text-white leading-tight max-w-5xl mx-auto">
             Start Your Free Trial Today And Explore The Endless Entertainment Possibilities With
-            <span className="text-white"> fiootv</span>
+            <span className="text-white"> HeroLiveTV</span>
           </h2>
         </motion.div>
       </div>

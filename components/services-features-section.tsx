@@ -39,7 +39,7 @@ const services: Service[] = [
       },
       {
         title: "Free Trials",
-        description: "Experience fiootv with a free trial to explore all we have to offer before committing.",
+        description: "Experience HeroLiveTV with a free trial to explore all we have to offer before committing.",
       },
     ] as HoverFeature[],
   },
@@ -138,7 +138,7 @@ const services: Service[] = [
       },
       {
         title: "Community Support",
-        description: "Join our user forums to connect with other fiootv users, share tips, and get advice.",
+        description: "Join our user forums to connect with other HeroLiveTV users, share tips, and get advice.",
       },
     ] as HoverFeature[],
   },

@@ -25,7 +25,7 @@ const reviews: Review[] = [
     id: 1,
     rating: 5,
     date: "2024-08-15",
-    text: "fiootv has completely revolutionized how we approach entertainment. The vast content library and real-time updates are incredibly accurate, and the streaming quality ensures we get the best viewing experience. This platform is the future of entertainment. fiootv is more than just a platform. From tracking new releases to managing watchlists, it handles everything seamlessly. Highly recommended!",
+    text: "HeroLiveTV has completely revolutionized how we approach entertainment. The vast content library and real-time updates are incredibly accurate, and the streaming quality ensures we get the best viewing experience. This platform is the future of entertainment. HeroLiveTV is more than just a platform. From tracking new releases to managing watchlists, it handles everything seamlessly. Highly recommended!",
     name: "Nasimul Huda",
     title: "CEO",
     company: "Nasim Entertainment Group",
@@ -35,7 +35,7 @@ const reviews: Review[] = [
     id: 2,
     rating: 5,
     date: "2024-08-15",
-    text: "fiootv is more than just a platform; it's a complete ecosystem for entertainment enthusiasts.",
+    text: "HeroLiveTV is more than just a platform; it's a complete ecosystem for entertainment enthusiasts.",
     name: "Nazmul Haque",
     title: "Director",
     company: "Eastern Media Industries",
@@ -45,7 +45,7 @@ const reviews: Review[] = [
     id: 3,
     rating: 5,
     date: "2024-08-15",
-    text: "The content discovery feature on fiootv is exceptional. It allows us to find exactly what we want to watch.",
+    text: "The content discovery feature on HeroLiveTV is exceptional. It allows us to find exactly what we want to watch.",
     name: "Fahmida Islam",
     title: "Managing Director",
     company: "Global Entertainment Ltd.",
@@ -65,7 +65,7 @@ const reviews: Review[] = [
     id: 5,
     rating: 5,
     date: "2024-08-15",
-    text: "fiootv has revolutionized how we approach entertainment consumption.",
+    text: "HeroLiveTV has revolutionized how we approach entertainment consumption.",
     name: "Rafiun Islam",
     title: "CEO",
     company: "Apex Entertainment",
@@ -193,10 +193,10 @@ export function ReviewsSection() {
       <style jsx global>{`
         .review-swiper .swiper-button-next,
         .review-swiper .swiper-button-prev {
-          color: #ef2828;
+          color: #FF6B35;
         }
         .review-swiper .swiper-pagination-bullet-active {
-          background-color: #ef2828;
+          background-color: #FF6B35;
         }
         .review-swiper .swiper-wrapper {
           display: flex;

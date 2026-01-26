@@ -7,36 +7,36 @@ import { Footer } from "@/components/footer";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.fiootv.com";
+  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.herolivetv.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "FiooTV - Best IPTV Service Provider | 4000+ Live Channels | $15.99/Month",
-  description: "FiooTV offers 4000+ live TV channels from around the world. Watch unlimited entertainment on TV, smartphones, laptops, and handheld devices. Starting at $15.99/month. Cut the cable and save!",
-  keywords: ["IPTV", "TV service", "streaming", "live TV", "cable alternative", "FiooTV", "IPTV service provider", "streaming service"],
-  authors: [{ name: "FiooTV" }],
-  creator: "FiooTV",
-  publisher: "FiooTV",
+  title: "HeroLiveTV - Best IPTV Service Provider | 4000+ Live Channels | $12.50/Month",
+  description: "HeroLiveTV offers 4000+ live TV channels from around the world. Watch unlimited entertainment on TV, smartphones, laptops, and handheld devices. Starting at $12.50/month. Cut the cable and save!",
+  keywords: ["IPTV", "TV service", "streaming", "live TV", "cable alternative", "HeroLiveTV", "IPTV service provider", "streaming service"],
+  authors: [{ name: "HeroLiveTV" }],
+  creator: "HeroLiveTV",
+  publisher: "HeroLiveTV",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: defaultUrl,
-    siteName: "FiooTV",
-    title: "FiooTV - Best IPTV Service Provider | 4000+ Live Channels",
-    description: "FiooTV offers 4000+ live TV channels from around the world. Watch unlimited entertainment on any device starting at $15.99/month.",
+    siteName: "HeroLiveTV",
+    title: "HeroLiveTV - Best IPTV Service Provider | 4000+ Live Channels",
+    description: "HeroLiveTV offers 4000+ live TV channels from around the world. Watch unlimited entertainment on any device starting at $12.50/month.",
     images: [
       {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "FiooTV - Best IPTV Service Provider",
+        alt: "HeroLiveTV - Best IPTV Service Provider",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FiooTV - Best IPTV Service Provider | 4000+ Live Channels",
-    description: "FiooTV offers 4000+ live TV channels from around the world. Watch unlimited entertainment on any device starting at $15.99/month.",
+    title: "HeroLiveTV - Best IPTV Service Provider | 4000+ Live Channels",
+    description: "HeroLiveTV offers 4000+ live TV channels from around the world. Watch unlimited entertainment on any device starting at $12.50/month.",
     images: ["/opengraph-image.png"],
   },
   icons: {
@@ -75,15 +75,15 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "FiooTV",
+    name: "HeroLiveTV",
     url: defaultUrl,
-    logo: `${defaultUrl}/opengraph-image.png`,
-    description: "FiooTV offers 4000+ live TV channels from around the world. Watch unlimited entertainment on TV, smartphones, laptops, and handheld devices.",
+    logo: `${defaultUrl}/logo.png`,
+    description: "HeroLiveTV offers 4000+ live TV channels from around the world. Watch unlimited entertainment on TV, smartphones, laptops, and handheld devices.",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+1-855-561-4578",
+      telephone: "+1-716-800-3757",
       contactType: "Customer Service",
-      email: "support@fiootv.com",
+      email: "support@herolivetv.com",
       availableLanguage: "English",
     },
     sameAs: [
@@ -97,7 +97,7 @@ export default function RootLayout({
     serviceType: "IPTV Streaming Service",
     provider: {
       "@type": "Organization",
-      name: "FiooTV",
+      name: "HeroLiveTV",
     },
     areaServed: "Worldwide",
     description: "Premium IPTV streaming service with 4000+ live TV channels, 28K+ movies, 6K+ series, and on-demand content.",

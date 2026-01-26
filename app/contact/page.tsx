@@ -32,7 +32,10 @@ export default function ContactPage() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          source: "HeroLiveTV",
+        }),
       });
       let data: { error?: string; success?: boolean } = {};
       const text = await res.text();
@@ -245,7 +248,7 @@ export default function ContactPage() {
             <div className="absolute bottom-12 left-8 right-8 lg:left-12 lg:right-12 lg:bottom-16 z-10">
               {/* Main Quote */}
               <p className="text-white text-2xl lg:text-3xl font-medium leading-relaxed mb-6 max-w-2xl">
-                &quot;FiooTV is the perfect tool for startups to keep track of their entertainment needs. Their intuitive platform and streaming capabilities have saved our team hours of manual work.&quot;
+                &quot;HeroLiveTV is the perfect tool for startups to keep track of their entertainment needs. Their intuitive platform and streaming capabilities have saved our team hours of manual work.&quot;
               </p>
             
             </div>
@@ -267,10 +270,10 @@ export default function ContactPage() {
                 Send us an email anytime.
               </p>
               <a
-                href="mailto:support@fiootv.com"
+                href="mailto:support@herolivetv.com"
                 className="text-sm text-gray-900 hover:text-primary underline font-medium"
               >
-                support@fiootv.com
+                support@herolivetv.com
               </a>
             </div>
 
@@ -286,10 +289,10 @@ export default function ContactPage() {
                 Mon-Fri from 8am to 5pm.
               </p>
               <a
-                href="tel:+18555614578"
+                href="tel:+17168003757"
                 className="text-sm text-gray-900 hover:text-primary underline font-medium"
               >
-                +1-855-561-4578
+                +1-716-800-3757
               </a>
             </div>
 

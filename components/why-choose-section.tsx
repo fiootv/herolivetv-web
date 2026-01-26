@@ -63,7 +63,7 @@ export function WhyChooseSection() {
         >
           <h2 className="text-3xl md:text-6xl font-semibold text-left mb-6 text-gray-900 px-4 max-w-7xl mx-auto">
             Why Choose{" "}
-            <span className="text-primary">fiootv</span>?
+            <span className="text-primary">HeroLiveTV</span>?
           </h2>
         </motion.div>
 

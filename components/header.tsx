@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -74,10 +75,10 @@ export function Header() {
             <div className="flex items-center gap-2 text-gray-400">
               <Phone className="h-3 w-3" />
               <a
-                href="tel:+18555614578"
+                href="tel:+17168003757"
                 className="hover:text-primary transition-colors duration-200 font-medium"
               >
-                +1-855-561-4578
+                +1-716-800-3757
               </a>
             </div>
           </div>
@@ -89,14 +90,14 @@ export function Header() {
               href="/"
               className="flex items-center gap-2 group relative z-10"
             >
-              <div className="relative">
-                <span className="text-3xl md:text-4xl font-light text-white">
-                  fioo
-                </span>
-                <span className="text-3xl md:text-4xl font-bold text-primary inline-block">
-                  tv
-                </span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="HeroLiveTV"
+                width={180}
+                height={50}
+                className="h-8 md:h-10 w-auto"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -166,8 +167,14 @@ export function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="flex items-center"
             >
-              <span className="text-2xl font-light text-white">fioo</span>
-              <span className="text-2xl font-bold text-primary">tv</span>
+              <Image
+                src="/logo.png"
+                alt="HeroLiveTV"
+                width={140}
+                height={40}
+                className="h-8 w-auto"
+                priority
+              />
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
@@ -211,10 +218,10 @@ export function Header() {
               <div className="flex items-center justify-center gap-2 text-sm text-gray-400 pb-2">
                 <Phone className="h-4 w-4 text-primary" />
                 <a
-                  href="tel:+18555614578"
+                  href="tel:+17168003757"
                   className="hover:text-primary transition-colors"
                 >
-                  +1-855-561-4578
+                  +1-716-800-3757
                 </a>
               </div>
             </div>

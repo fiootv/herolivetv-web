@@ -25,10 +25,10 @@ export function ServicesIntroSection() {
 
           {/* Description */}
           <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-            At fiootv, we've designed our services to provide you with the ultimate entertainment experience. 
+            At HeroLiveTV, we've designed our services to provide you with the ultimate entertainment experience. 
             From an extensive library of movies and series to seamless multi-device streaming, we ensure that 
             your entertainment needs are met with quality, convenience, and affordability. Discover what makes 
-            fiootv the perfect choice for your streaming needs.
+            HeroLiveTV the perfect choice for your streaming needs.
           </p>
         </motion.div>
       </div>

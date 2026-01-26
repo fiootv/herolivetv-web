@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.fiootv.com";
+  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.herolivetv.com";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy – FiooTV | Best IPTV Service",
+  title: "Privacy Policy – HeroLiveTV | Best IPTV Service",
   description:
-    "FiooTV privacy policy. How we collect, use, and protect your information. Cookies, data usage, and policy updates.",
+    "HeroLiveTV privacy policy. How we collect, use, and protect your information. Cookies, data usage, and policy updates.",
   openGraph: {
-    title: "Privacy Policy – FiooTV | Best IPTV Service",
-    description: "FiooTV privacy policy. How we collect, use, and protect your information. Cookies, data usage, and policy updates.",
+    title: "Privacy Policy – HeroLiveTV | Best IPTV Service",
+    description: "HeroLiveTV privacy policy. How we collect, use, and protect your information. Cookies, data usage, and policy updates.",
     url: `${defaultUrl}/privacy-policy`,
     type: "website",
     images: [
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "FiooTV Privacy Policy",
+        alt: "HeroLiveTV Privacy Policy",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy – FiooTV | Best IPTV Service",
-    description: "FiooTV privacy policy. How we collect, use, and protect your information.",
+    title: "Privacy Policy – HeroLiveTV | Best IPTV Service",
+    description: "HeroLiveTV privacy policy. How we collect, use, and protect your information.",
     images: ["/opengraph-image.png"],
   },
   alternates: {
@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
           Privacy Policy
         </h1>
         <p className="mb-10 text-lg text-gray-600">
-          Fiootv collects and manages user data according to the following
+          HeroLiveTV collects and manages user data according to the following
           Privacy Policy. By using the Website, you agree to the terms of this
           Privacy Policy.
         </p>
@@ -56,7 +56,7 @@ export default function PrivacyPolicyPage() {
               Cookies are small-sized text files saved by your browser on your
               computer, and the browser will send this file to our server only
               when you visit our website. We use cookies technology to improve
-              the quality of Fiootv website. By default, your browser is set to
+              the quality of HeroLiveTV website. By default, your browser is set to
               allow cookies, but you can always choose to block cookies in your
               browser&apos;s settings.
             </p>
@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p className="leading-relaxed">
               The trademarks and logos of all the merchants displayed on the
-              website are the property of their respective owners. Fiootv is not
+              website are the property of their respective owners. HeroLiveTV is not
               affiliated or associated with any of them.
             </p>
           </section>
@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
               Safety Concern
             </h2>
             <p className="leading-relaxed">
-              Please be assured that Fiootv only provides original apps and APK
+              Please be assured that HeroLiveTV only provides original apps and APK
               files without any cheat, modifications or virus. Your personal
               information will NOT be shared with any other third party without
               your explicit permission.

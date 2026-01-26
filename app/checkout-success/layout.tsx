@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.fiootv.com";
+  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.herolivetv.com";
 
 export const metadata: Metadata = {
-  title: "Order Confirmed – FiooTV | Thank You for Your Purchase",
-  description: "Thank you for your FiooTV subscription order! Your order has been received and will be processed shortly. You'll receive a confirmation email with setup instructions.",
+  title: "Order Confirmed – HeroLiveTV | Thank You for Your Purchase",
+  description: "Thank you for your HeroLiveTV subscription order! Your order has been received and will be processed shortly. You'll receive a confirmation email with setup instructions.",
   robots: {
     index: false,
     follow: true,
   },
   openGraph: {
-    title: "Order Confirmed – FiooTV | Thank You for Your Purchase",
-    description: "Thank you for your FiooTV subscription order! Your order has been received and will be processed shortly.",
+    title: "Order Confirmed – HeroLiveTV | Thank You for Your Purchase",
+    description: "Thank you for your HeroLiveTV subscription order! Your order has been received and will be processed shortly.",
     url: `${defaultUrl}/checkout-success`,
     type: "website",
     images: [
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "FiooTV Order Confirmed",
+        alt: "HeroLiveTV Order Confirmed",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Order Confirmed – FiooTV | Thank You for Your Purchase",
-    description: "Thank you for your FiooTV subscription order! Your order has been received.",
+    title: "Order Confirmed – HeroLiveTV | Thank You for Your Purchase",
+    description: "Thank you for your HeroLiveTV subscription order! Your order has been received.",
     images: ["/opengraph-image.png"],
   },
   alternates: {

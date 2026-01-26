@@ -100,7 +100,7 @@ export default function DownloadPage() {
             Compatibility <span className="text-primary">For Your Devices</span>
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12">
-            FiooTV Currently Works On All Android Mobiles/Tablets, Android SMART TVs, and Android Boxes as well.
+            HeroLiveTV Currently Works On All Android Mobiles/Tablets, Android SMART TVs, and Android Boxes as well.
           </p>
         </motion.div>
 

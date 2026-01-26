@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.fiootv.com";
+  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.herolivetv.com";
 
 export const metadata: Metadata = {
-  title: "Refund Policy – FiooTV | Best IPTV Service",
-  description: "FiooTV refund policy. 7-day refund policy. Request a refund via our contact form using the same email and order number.",
+  title: "Refund Policy – HeroLiveTV | Best IPTV Service",
+  description: "HeroLiveTV refund policy. 7-day refund policy. Request a refund via our contact form using the same email and order number.",
   openGraph: {
-    title: "Refund Policy – FiooTV | Best IPTV Service",
-    description: "FiooTV refund policy. 7-day refund policy. Request a refund via our contact form using the same email and order number.",
+    title: "Refund Policy – HeroLiveTV | Best IPTV Service",
+    description: "HeroLiveTV refund policy. 7-day refund policy. Request a refund via our contact form using the same email and order number.",
     url: `${defaultUrl}/refund-policy`,
     type: "website",
     images: [
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "FiooTV Refund Policy",
+        alt: "HeroLiveTV Refund Policy",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Refund Policy – FiooTV | Best IPTV Service",
-    description: "FiooTV refund policy. 7-day refund policy. Request a refund via our contact form.",
+    title: "Refund Policy – HeroLiveTV | Best IPTV Service",
+    description: "HeroLiveTV refund policy. 7-day refund policy. Request a refund via our contact form.",
     images: ["/opengraph-image.png"],
   },
   alternates: {

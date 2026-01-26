@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.fiootv.com";
+  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.herolivetv.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [

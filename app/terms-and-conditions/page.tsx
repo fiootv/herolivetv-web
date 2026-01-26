@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.fiootv.com";
+  : process.env.NEXT_PUBLIC_SITE_URL || "https://www.herolivetv.com";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions – FiooTV | Best IPTV Service",
+  title: "Terms and Conditions – HeroLiveTV | Best IPTV Service",
   description:
-    "FiooTV terms and conditions. Usage, service terms, refund policy, compatibility, and other terms for using our IPTV streaming service.",
+    "HeroLiveTV terms and conditions. Usage, service terms, refund policy, compatibility, and other terms for using our IPTV streaming service.",
   openGraph: {
-    title: "Terms and Conditions – FiooTV | Best IPTV Service",
-    description: "FiooTV terms and conditions. Usage, service terms, refund policy, compatibility, and other terms for using our IPTV streaming service.",
+    title: "Terms and Conditions – HeroLiveTV | Best IPTV Service",
+    description: "HeroLiveTV terms and conditions. Usage, service terms, refund policy, compatibility, and other terms for using our IPTV streaming service.",
     url: `${defaultUrl}/terms-and-conditions`,
     type: "website",
     images: [
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "FiooTV Terms and Conditions",
+        alt: "HeroLiveTV Terms and Conditions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terms and Conditions – FiooTV | Best IPTV Service",
-    description: "FiooTV terms and conditions. Usage, service terms, refund policy, and compatibility.",
+    title: "Terms and Conditions – HeroLiveTV | Best IPTV Service",
+    description: "HeroLiveTV terms and conditions. Usage, service terms, refund policy, and compatibility.",
     images: ["/opengraph-image.png"],
   },
   alternates: {
@@ -42,9 +42,9 @@ export default function TermsAndConditionsPage() {
           Terms and Conditions
         </h1>
         <p className="mb-10 text-lg text-gray-600">
-          Fiootv provides an online video streaming service which allows clients
+          HeroLiveTV provides an online video streaming service which allows clients
           to browse distinctive offerings of live and on-demand programs.
-          Consequently, by accessing or using any of the Fiootv services, You
+          Consequently, by accessing or using any of the HeroLiveTV services, You
           acknowledge and consent to these terms:
         </p>
 
@@ -68,7 +68,7 @@ export default function TermsAndConditionsPage() {
               Minimum age requirement
             </h2>
             <p className="leading-relaxed">
-              In order to become a member and utilize the Fiootv services, you
+              In order to become a member and utilize the HeroLiveTV services, you
               must be 18 years old or older.
             </p>
           </section>
@@ -105,7 +105,7 @@ export default function TermsAndConditionsPage() {
               device capabilities. The elements will be based on your location,
               internet capacity, the number of devices connected to the same
               network, the content you have chosen, and the configuration of the
-              device you are using. Subsequently, Fiootv can&apos;t make any
+              device you are using. Subsequently, HeroLiveTV can&apos;t make any
               guarantees about the content in these regards. Please note sharing
               a subscription will result in permanent suspension or device ban.
             </p>
@@ -212,13 +212,13 @@ export default function TermsAndConditionsPage() {
               understanding with this Agreement ought to be in the English
               language. We maintain all authority to instantly end or limit your
               use of the services or access to content at any time, without
-              notice or liability, if Fiootv determines in its sole discretion
+              notice or liability, if HeroLiveTV determines in its sole discretion
               that you have breached these Terms, disregarded any law, rule, or
               regulation.
             </p>
             <p className="mt-4 leading-relaxed">
-              The Fiootv logo, and other Fiootv marks, graphics, scripts, are
-              trademarks of Fiootv. None of the Fiootv trademarks may be copied,
+              The HeroLiveTV logo, and other HeroLiveTV marks, graphics, scripts, are
+              trademarks of HeroLiveTV. None of the HeroLiveTV trademarks may be copied,
               downloaded, or otherwise exploited.
             </p>
           </section>

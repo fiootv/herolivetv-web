@@ -66,7 +66,7 @@ Mary subscribed for 3 Months on February 1st at 11:55 PM and activation credenti
     answer: "If you are using a set-top box such as MAG or AVOV and have just set up your device with our service, you will need to perform a hard reset of your device. Simply power off your device, unplug your power cable and re-plug it in.",
   },
   {
-    question: "How to setup on FiooTv on Fire Stick?",
+    question: "How to setup on HeroLiveTV on Fire Stick?",
     answer: `First we need to enable files from unknown sources.
 
 1. Start your Fire TV and go to the Home page.
@@ -104,7 +104,7 @@ export default function FAQsPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            Find answers to the most commonly asked questions about FiooTV
+            Find answers to the most commonly asked questions about HeroLiveTV
           </p>
         </motion.div>
 

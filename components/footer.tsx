@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import {
@@ -88,12 +89,16 @@ export function Footer() {
             {/* Brand Column */}
             <div className="lg:col-span-2">
               <Link href="/" className="inline-block mb-4">
-                <h2 className="text-2xl md:text-3xl font-bold text-white">
-                  <span className="font-normal">fioo</span>tv
-                </h2>
+                <Image
+                  src="/logo.png"
+                  alt="HeroLiveTV"
+                  width={200}
+                  height={60}
+                  className="h-10 md:h-12 w-auto"
+                />
               </Link>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Your ultimate entertainment destination. Stream movies, series, documentaries, and more in multiple languages with fiootv.
+                Your ultimate entertainment destination. Stream movies, series, documentaries, and more in multiple languages with HeroLiveTV.
               </p>
 
               {/* Contact Info */}
@@ -101,19 +106,19 @@ export function Footer() {
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                   <a
-                    href="mailto:support@fiootv.com"
+                    href="mailto:support@herolivetv.com"
                     className="hover:text-primary transition-colors"
                   >
-                    support@fiootv.com
+                    support@herolivetv.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                   <a
-                    href="tel:+18555614578"
+                    href="tel:+17168003757"
                     className="hover:text-primary transition-colors"
                   >
-                    +1-855-561-4578
+                    +1-716-800-3757
                   </a>
                 </div>
               </div>
@@ -212,7 +217,7 @@ export function Footer() {
         <div className="container mx-auto px-4 max-w-7xl py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} fiootv. All rights reserved.
+              © {currentYear} HeroLiveTV. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm">
               <Link

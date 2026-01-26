@@ -24,7 +24,7 @@ export function ServicesFinalCTASection() {
             </h2>
             <p className="text-white/90 text-base md:text-lg mb-8 leading-relaxed">
               Join thousands of satisfied users and experience the best in entertainment. 
-              Start your journey with fiootv today.
+              Start your journey with HeroLiveTV today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/billing">

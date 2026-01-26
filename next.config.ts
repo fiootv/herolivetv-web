@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "www.fiootv.com",
+        hostname: "www.herolivetv.com",
       },
       {
         protocol: "https",

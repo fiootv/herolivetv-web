@@ -61,7 +61,7 @@ export function ContentLibrarySection() {
         >
           <h2 className="text-3xl md:text-6xl font-semibold text-left mb-6 text-gray-900 px-4 max-w-7xl mx-auto">
             Explore Our Library and see{" "}
-            <span className="text-primary">for yourself</span> why fiootv is the ultimate choice.
+            <span className="text-primary">for yourself</span> why HeroLiveTV is the ultimate choice.
           </h2>
         </motion.div>
 
