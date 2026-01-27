@@ -46,10 +46,7 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61582801749446", label: "Facebook" },
   ];
 
   return (
@@ -61,7 +58,7 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-primary border border-primary p-8 md:p-12 mb-12 md:mb-16 text-center"
+          className="bg-primary border border-primary p-8 md:p-12 mb-12 md:mb-16 text-center rounded-3xl md:rounded-[3rem]"
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
@@ -132,7 +129,7 @@ export function Footer() {
                       key={social.label}
                       href={social.href}
                       aria-label={social.label}
-                      className="w-10 h-10 bg-gray-800 border border-gray-700 hover:bg-primary hover:border-primary flex items-center justify-center transition-colors duration-200 group"
+                      className="w-10 h-10 bg-gray-800 border border-gray-700 hover:bg-primary hover:border-primary flex items-center justify-center transition-colors duration-200 group rounded-xl"
                     >
                       <Icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
                     </a>

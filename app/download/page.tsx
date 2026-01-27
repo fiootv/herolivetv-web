@@ -118,7 +118,7 @@ export default function DownloadPage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: 0.1 * index }}
-                className="flex items-center gap-3 bg-gray-50 border border-gray-200 p-4 hover:border-primary transition-colors duration-200"
+                className="flex items-center gap-3 bg-gray-50 border border-gray-200 p-4 hover:border-primary transition-colors duration-200 rounded-xl"
               >
                 <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                 <span className="text-gray-900 font-medium">{feature}</span>
@@ -142,11 +142,11 @@ export default function DownloadPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white border border-gray-200 p-8 hover:border-primary transition-colors duration-200"
+                  className="bg-white border border-gray-200 p-8 hover:border-primary transition-colors duration-200 rounded-2xl md:rounded-3xl"
                 >
                   <div className="flex flex-col items-center text-center">
                     {/* Platform Image/Icon */}
-                    <div className="w-32 h-32 mb-6 relative border border-gray-200 overflow-hidden bg-gray-50 flex items-center justify-center">
+                    <div className="w-32 h-32 mb-6 relative border border-gray-200 overflow-hidden bg-gray-50 flex items-center justify-center rounded-xl">
                       {platform.image ? (
                         <Image
                           src={platform.image}
@@ -176,7 +176,7 @@ export default function DownloadPage() {
                       {platform.downloads.map((download, downloadIndex) => (
                         <Button
                           key={downloadIndex}
-                          className="w-full bg-gray-50 hover:bg-primary text-gray-700 hover:text-white px-6 py-3 text-sm font-medium border border-gray-200 hover:border-primary transition-colors duration-200 flex items-center justify-center gap-2"
+                          className="w-full bg-gray-50 hover:bg-primary text-gray-700 hover:text-white px-6 py-3 text-sm font-medium border border-gray-200 hover:border-primary transition-colors duration-200 flex items-center justify-center gap-2 rounded-xl"
                           onClick={() => window.open(download.url, '_blank')}
                         >
                           <Download className="w-4 h-4" />
@@ -196,7 +196,7 @@ export default function DownloadPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gray-50 border border-gray-200 p-8 md:p-12"
+          className="bg-gray-50 border border-gray-200 p-8 md:p-12 rounded-2xl md:rounded-3xl"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
             Need Help Setting Up?
@@ -207,7 +207,7 @@ export default function DownloadPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/faqs">
               <Button
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-semibold transition-colors duration-200"
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-semibold transition-colors duration-200 rounded-2xl"
               >
                 View Setup Guides
               </Button>
@@ -215,7 +215,7 @@ export default function DownloadPage() {
             <Link href="/contact">
               <Button
                 variant="outline"
-                className="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-base font-semibold transition-colors duration-200"
+                className="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-base font-semibold transition-colors duration-200 rounded-2xl"
               >
                 Contact Support
               </Button>

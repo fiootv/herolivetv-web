@@ -46,7 +46,7 @@ export function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-black shadow-lg border-b border-white/10"
+            ? "bg-black/95 backdrop-blur-sm"
             : "bg-black"
         }`}
       >
@@ -118,7 +118,7 @@ export function Header() {
             <div className="flex items-center gap-3 md:gap-4">
               {/* View Plans Button */}
               <Link href="/pricing">
-              <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
+              <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-2xl font-medium transition-all duration-300">
                 View Plans
               </Button>
               </Link>
@@ -126,7 +126,7 @@ export function Header() {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-lg"
+                className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-xl"
                 aria-label="Toggle Menu"
               >
                 {isMobileMenuOpen ? (
@@ -156,7 +156,7 @@ export function Header() {
 
         {/* Mobile Menu Panel */}
         <div
-          className={`absolute top-0 right-0 bottom-0 w-full max-w-sm bg-black border-l border-white/10 transform transition-transform duration-300 ease-out ${
+          className={`absolute top-0 right-0 bottom-0 w-full max-w-sm bg-black border-l border-white/10 transform transition-transform duration-300 ease-out rounded-l-3xl ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -192,7 +192,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg transition-all duration-200 font-medium"
+                className="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-xl transition-all duration-200 font-medium"
                 style={{
                   animation: isMobileMenuOpen
                     ? `slideIn 0.3s ease-out ${index * 0.05}s both`
@@ -209,7 +209,7 @@ export function Header() {
             <div className="space-y-4">
               <Link href="/pricing">
               <Button
-                className="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-lg font-medium"
+                className="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-2xl font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 View Plans

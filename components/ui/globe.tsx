@@ -235,8 +235,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
       const ctx = canvas.getContext("2d");
       
       if (ctx) {
-        // Draw the pin shape (red teardrop/marker pin)
-        ctx.fillStyle = "#ff0000"; // Bright red color for the pin
+        // Draw the pin shape (orange teardrop/marker pin)
+        ctx.fillStyle = "#ff6b35"; // Orange color for the pin
         ctx.beginPath();
         ctx.moveTo(32, 64); // Bottom center point
         ctx.lineTo(14, 30); // Left side of pin

@@ -192,7 +192,7 @@ export default function ChannelsPage() {
           <h1 className="text-xl font-bold text-gray-900">Channels</h1>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 rounded-md text-gray-700 hover:bg-gray-100"
+            className="p-2 rounded-xl text-gray-700 hover:bg-gray-100"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -202,7 +202,7 @@ export default function ChannelsPage() {
         {/* Left Sidebar - Categories */}
         <div className={`${
           isMobileMenuOpen ? 'block' : 'hidden'
-        } md:block w-full md:w-80 bg-gray-50 border-r border-gray-200 flex flex-col fixed md:relative z-40 h-screen md:h-full top-0 md:top-auto left-0 md:left-auto`}>
+        } md:block w-full md:w-80 bg-gray-50 border-r border-gray-200 flex flex-col fixed md:relative z-40 h-screen md:h-full top-0 md:top-auto left-0 md:left-auto rounded-r-2xl md:rounded-r-none`}>
           <div className="p-4 md:p-6 border-b border-gray-200 flex-shrink-0">
             <h1 className="text-xl md:text-2xl font-bold text-gray-900 hidden md:block">Channels</h1>
             <h2 className="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">Channel Categories</h2>
@@ -252,7 +252,7 @@ export default function ChannelsPage() {
                           setSelectedCategory(category);
                           setIsMobileMenuOpen(false); // Close mobile menu on selection
                         }}
-                        className={`w-full text-left px-4 md:px-6 py-2 md:py-3 transition-colors text-sm md:text-base ${
+                        className={`w-full text-left px-4 md:px-6 py-2 md:py-3 transition-colors text-sm md:text-base rounded-lg ${
                           isSelected
                             ? 'bg-primary text-white'
                             : 'text-gray-700 hover:bg-gray-100'
@@ -351,7 +351,7 @@ export default function ChannelsPage() {
                   <p className="text-gray-600 text-sm mb-4">{error}</p>
                   <button
                     onClick={fetchChannels}
-                    className="px-4 py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors"
+                    className="px-4 py-2 bg-primary text-white rounded-xl hover:bg-primary/90 transition-colors"
                   >
                     Try Again
                   </button>

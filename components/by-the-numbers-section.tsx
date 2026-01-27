@@ -7,7 +7,7 @@ const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World)
   ssr: false,
 });
 
-const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+const colors = ["#ff6b35", "#ff8c42", "#ffa552"];
 
 const sampleArcs = [
   // ...generateRandomArcs(30), // Random generation removed to focus on land-based manual points
@@ -154,7 +154,7 @@ const sampleArcs = [
     endLat: 34.0522,
     endLng: -118.2437, // LA
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
     image: "https://plus.unsplash.com/premium_photo-1678197937465-bdbc4ed95815?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww",
   },
   {
@@ -164,7 +164,7 @@ const sampleArcs = [
     endLat: 48.8566,
     endLng: -2.3522, // Paris
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=60",
   },
   {
@@ -174,17 +174,17 @@ const sampleArcs = [
     endLat: 22.3193, // HK
     endLng: 114.1694,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=60",
   },
   // Add some filler points on random continents
-  { order: 8, startLat: -25.2744, startLng: 133.7751, endLat: -30, endLng: 135, arcAlt: 0.1, color: "#ff0000" }, // Australia
-  { order: 8, startLat: -4.4419, startLng: 15.2663, endLat: -10, endLng: 20, arcAlt: 0.1, color: "#ff0000" }, // Africa (Congo)
-  { order: 9, startLat: 55.7558, startLng: 37.6173, endLat: 60, endLng: 40, arcAlt: 0.1, color: "#ff0000" }, // Russia
-  { order: 9, startLat: 56.1304, startLng: -106.3468, endLat: 60, endLng: -100, arcAlt: 0.1, color: "#ff0000" }, // Canada
-  { order: 10, startLat: -14.2350, startLng: -51.9253, endLat: -10, endLng: -50, arcAlt: 0.1, color: "#ff0000" }, // Brazil
-  { order: 10, startLat: 20.5937, startLng: 78.9629, endLat: 25, endLng: 80, arcAlt: 0.1, color: "#ff0000" }, // India
-  { order: 11, startLat: 39.9042, startLng: 116.4074, endLat: 35, endLng: 110, arcAlt: 0.1, color: "#ff0000" }, // China
+  { order: 8, startLat: -25.2744, startLng: 133.7751, endLat: -30, endLng: 135, arcAlt: 0.1, color: colors[Math.floor(Math.random() * colors.length)] }, // Australia
+  { order: 8, startLat: -4.4419, startLng: 15.2663, endLat: -10, endLng: 20, arcAlt: 0.1, color: colors[Math.floor(Math.random() * colors.length)] }, // Africa (Congo)
+  { order: 9, startLat: 55.7558, startLng: 37.6173, endLat: 60, endLng: 40, arcAlt: 0.1, color: colors[Math.floor(Math.random() * colors.length)] }, // Russia
+  { order: 9, startLat: 56.1304, startLng: -106.3468, endLat: 60, endLng: -100, arcAlt: 0.1, color: colors[Math.floor(Math.random() * colors.length)] }, // Canada
+  { order: 10, startLat: -14.2350, startLng: -51.9253, endLat: -10, endLng: -50, arcAlt: 0.1, color: colors[Math.floor(Math.random() * colors.length)] }, // Brazil
+  { order: 10, startLat: 20.5937, startLng: 78.9629, endLat: 25, endLng: 80, arcAlt: 0.1, color: colors[Math.floor(Math.random() * colors.length)] }, // India
+  { order: 11, startLat: 39.9042, startLng: 116.4074, endLat: 35, endLng: 110, arcAlt: 0.1, color: colors[Math.floor(Math.random() * colors.length)] }, // China
 
   {
     order: 6,
@@ -323,7 +323,7 @@ const sampleArcs = [
     endLat: 5,
     endLng: -145,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 11,
@@ -332,7 +332,7 @@ const sampleArcs = [
     endLat: 18,
     endLng: -155,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 11,
@@ -341,7 +341,7 @@ const sampleArcs = [
     endLat: -12,
     endLng: -165,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 12,
@@ -350,7 +350,7 @@ const sampleArcs = [
     endLat: -22,
     endLng: -125,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   // Atlantic Ocean points
   {
@@ -360,7 +360,7 @@ const sampleArcs = [
     endLat: 32,
     endLng: -35,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 12,
@@ -369,7 +369,7 @@ const sampleArcs = [
     endLat: 23,
     endLng: -25,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 13,
@@ -378,7 +378,7 @@ const sampleArcs = [
     endLat: 3,
     endLng: -20,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 13,
@@ -387,7 +387,7 @@ const sampleArcs = [
     endLat: -17,
     endLng: -10,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   // Indian Ocean points
   {
@@ -397,7 +397,7 @@ const sampleArcs = [
     endLat: -7,
     endLng: 80,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 14,
@@ -406,7 +406,7 @@ const sampleArcs = [
     endLat: -22,
     endLng: 95,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 14,
@@ -415,7 +415,7 @@ const sampleArcs = [
     endLat: 3,
     endLng: 75,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   // Arctic Ocean points
   {
@@ -425,7 +425,7 @@ const sampleArcs = [
     endLat: 78,
     endLng: -5,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 15,
@@ -434,7 +434,7 @@ const sampleArcs = [
     endLat: 82,
     endLng: 5,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   // Additional scattered ocean points
   {
@@ -444,7 +444,7 @@ const sampleArcs = [
     endLat: 13,
     endLng: -65,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 15,
@@ -453,7 +453,7 @@ const sampleArcs = [
     endLat: -32,
     endLng: -170,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 16,
@@ -462,7 +462,7 @@ const sampleArcs = [
     endLat: 42,
     endLng: 15,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 16,
@@ -471,7 +471,7 @@ const sampleArcs = [
     endLat: -37,
     endLng: 125,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 16,
@@ -480,7 +480,7 @@ const sampleArcs = [
     endLat: 8,
     endLng: 5,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 17,
@@ -489,7 +489,7 @@ const sampleArcs = [
     endLat: -47,
     endLng: -25,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 17,
@@ -498,7 +498,7 @@ const sampleArcs = [
     endLat: 53,
     endLng: -165,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 17,
@@ -507,7 +507,7 @@ const sampleArcs = [
     endLat: 28,
     endLng: 70,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   // Additional scattered ocean points for better distribution
   {
@@ -517,7 +517,7 @@ const sampleArcs = [
     endLat: 47,
     endLng: -45,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 18,
@@ -526,7 +526,7 @@ const sampleArcs = [
     endLat: -17,
     endLng: -45,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 18,
@@ -535,7 +535,7 @@ const sampleArcs = [
     endLat: 23,
     endLng: -135,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 19,
@@ -544,7 +544,7 @@ const sampleArcs = [
     endLat: -27,
     endLng: -135,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 19,
@@ -553,7 +553,7 @@ const sampleArcs = [
     endLat: 13,
     endLng: 165,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 19,
@@ -562,7 +562,7 @@ const sampleArcs = [
     endLat: -12,
     endLng: 105,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 20,
@@ -571,7 +571,7 @@ const sampleArcs = [
     endLat: 38,
     endLng: 25,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 20,
@@ -580,7 +580,7 @@ const sampleArcs = [
     endLat: 63,
     endLng: 10,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 20,
@@ -589,7 +589,7 @@ const sampleArcs = [
     endLat: -42,
     endLng: -55,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 21,
@@ -598,7 +598,7 @@ const sampleArcs = [
     endLat: 58,
     endLng: -175,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 21,
@@ -607,7 +607,7 @@ const sampleArcs = [
     endLat: -32,
     endLng: 165,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 21,
@@ -616,7 +616,7 @@ const sampleArcs = [
     endLat: 33,
     endLng: -85,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 22,
@@ -625,7 +625,7 @@ const sampleArcs = [
     endLat: -7,
     endLng: 155,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 22,
@@ -634,7 +634,7 @@ const sampleArcs = [
     endLat: 53,
     endLng: -35,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 22,
@@ -643,7 +643,7 @@ const sampleArcs = [
     endLat: -27,
     endLng: 5,
     arcAlt: 0.3,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 23,
@@ -652,7 +652,7 @@ const sampleArcs = [
     endLat: 18,
     endLng: 90,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 23,
@@ -661,7 +661,7 @@ const sampleArcs = [
     endLat: -2,
     endLng: 115,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
   {
     order: 23,
@@ -670,7 +670,7 @@ const sampleArcs = [
     endLat: 28,
     endLng: 45,
     arcAlt: 0.2,
-    color: "#ff0000",
+    color: colors[Math.floor(Math.random() * colors.length)],
   },
 
 ];
@@ -701,29 +701,46 @@ export function ByTheNumbersSection() {
   };
 
   return (
-    <section className="relative min-h-[500px] overflow-hidden bg-white py-10 md:py-20 !pb-0">
-      <h2 className="text-3xl md:text-6xl font-semibold text-center mb-6 text-gray-900 px-4">Why HeroLiveTV is Your <br /> Go-To EntertainmentHub</h2>
-      <p className="text-center mb-10 text-gray-600 px-4">Experience our HeroLiveTV platform from across the globe. and enjoy your favorite shows and movies.</p>
-      <div className="flex flex-row items-center justify-center h-full relative w-full">
-        <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full">
+    <section className="relative min-h-[500px] overflow-hidden bg-white py-12 md:py-20">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="bg-gray-50 rounded-3xl md:rounded-[3rem] overflow-hidden p-8 md:p-12 lg:p-16">
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 1,
-            }}
-            className="text-center mb-[12rem] md:mb-[24rem]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8 md:mb-12"
           >
-
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold mb-4 md:mb-6 text-gray-900">
+              Why HeroLiveTV is Your <br className="hidden md:block" /> Go-To Entertainment Hub
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+              Experience our HeroLiveTV platform from across the globe and enjoy your favorite shows and movies.
+            </p>
           </motion.div>
-          <div className="absolute w-full bottom-[-10rem] h-[50rem] md:h-[100rem] z-10 md:translate-y-[60%] translate-y-[48%]">
-            <World data={sampleArcs} globeConfig={globeConfig} />
+          
+          <div className="flex flex-row items-center justify-center h-full relative w-full">
+            <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full rounded-2xl md:rounded-3xl">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 1,
+                }}
+                className="text-center mb-[12rem] md:mb-[24rem]"
+              >
+              </motion.div>
+              <div className="absolute w-full bottom-[-10rem] h-[50rem] md:h-[100rem] z-10 md:translate-y-[60%] translate-y-[48%]">
+                <World data={sampleArcs} globeConfig={globeConfig} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

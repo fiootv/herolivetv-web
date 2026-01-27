@@ -96,21 +96,21 @@ function PricingContent() {
 
         {/* Duration Selector */}  
         <div className="mb-6">
-          <div className="flex flex-wrap justify-center gap-1 mb-8 max-w-xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-2 mb-8 max-w-xl mx-auto bg-white p-2 rounded-2xl">
             {pricingPlans.map((plan) => (
               <div key={plan.id} className="relative">
                 <button
                   onClick={() => setSelectedPlan(plan.id)}
-                  className={`px-7 py-3 text-sm font-medium transition-colors relative ${
+                  className={`px-6 md:px-7 py-3 text-sm font-medium transition-colors relative rounded-xl ${
                     selectedPlan === plan.id
                       ? "bg-gray-900 text-white"
-                      : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+                      : "bg-transparent text-gray-700 hover:bg-gray-100"
                   }`}
                 >
                   {plan.displayDuration}
                 </button>
                 {plan.bestValue && (
-                  <span className="absolute -top-2 -right-2 bg-primary text-white px-2 py-0.5 text-xs font-medium">
+                  <span className="absolute -top-2 -right-2 bg-primary text-white px-2 py-0.5 text-xs font-medium rounded-lg">
                     Best Value
                   </span>
                 )}
@@ -122,7 +122,7 @@ function PricingContent() {
         {/* Pricing Card */}
         <div className="max-w-xl mx-auto mb-16 px-1">
           
-          <div className={`bg-white border p-10 md:p-12 ${
+          <div className={`bg-white border p-10 md:p-12 rounded-3xl md:rounded-[3rem] ${
             currentPlan?.bestValue ? "border-primary" : "border-gray-200"
           }`}>
 
@@ -177,7 +177,7 @@ function PricingContent() {
             {/* CTA Button */}
             <Button
               onClick={handleSubscribe}
-              className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-base font-medium transition-colors"
+              className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-base font-medium transition-colors rounded-2xl"
             >
               Get Started
             </Button>
@@ -195,20 +195,20 @@ function PricingContent() {
 
         {/* Additional Info */}
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center bg-white border border-gray-200 p-6 rounded-2xl">
               <h3 className="text-lg font-medium text-gray-900 mb-2">Premium Content</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Access to thousands of movies and series across all genres
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-white border border-gray-200 p-6 rounded-2xl">
               <h3 className="text-lg font-medium text-gray-900 mb-2">Watch Anywhere</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Stream on TV, laptop, tablet, or mobile - anytime, anywhere
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-white border border-gray-200 p-6 rounded-2xl">
               <h3 className="text-lg font-medium text-gray-900 mb-2">Multi-Language</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Content available in 15+ languages for global entertainment

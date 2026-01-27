@@ -10,7 +10,7 @@ import { ReviewsSection } from "@/components/reviews-section";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-hidden">
       <Suspense fallback={<div>Loading...</div>}>
         <HeroSection />
         <ByTheNumbersSection />

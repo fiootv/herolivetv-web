@@ -75,7 +75,7 @@ const reviews: Review[] = [
 
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <div className="bg-white border border-gray-200 p-8 h-full flex flex-col hover:border-primary transition-colors duration-200">
+    <div className="bg-white border border-gray-200 p-6 md:p-8 h-full flex flex-col hover:border-primary transition-colors duration-200 rounded-2xl md:rounded-3xl">
       {/* Rating and Date */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2">
@@ -89,23 +89,23 @@ function ReviewCard({ review }: { review: Review }) {
           </div>
           <span className="text-gray-400 text-sm font-medium">(5/5)</span>
         </div>
-        <span className="text-gray-400 text-sm font-medium bg-gray-50 px-3 py-1 border border-gray-200">{review.date}</span>
+        <span className="text-gray-400 text-sm font-medium bg-gray-50 px-3 py-1 border border-gray-200 rounded-lg">{review.date}</span>
       </div>
 
       {/* Review Text */}
-      <p className="text-gray-900 leading-relaxed mb-8 flex-grow text-lg">
+      <p className="text-gray-900 leading-relaxed mb-8 flex-grow text-base md:text-lg">
         &quot;{review.text}&quot;
       </p>
 
       {/* Reviewer Info */}
       <div className="flex items-center gap-4 pt-6 border-t border-gray-200">
         <div
-          className={`w-14 h-14 ${review.avatarColor} flex items-center justify-center text-gray-800 font-bold text-xl border border-gray-200`}
+          className={`w-12 h-12 md:w-14 md:h-14 ${review.avatarColor} flex items-center justify-center text-gray-800 font-bold text-lg md:text-xl border border-gray-200 rounded-full`}
         >
           {review.name.charAt(0)}
         </div>
         <div>
-          <p className="font-semibold text-gray-900 text-lg">{review.name}</p>
+          <p className="font-semibold text-gray-900 text-base md:text-lg">{review.name}</p>
           <p className="text-sm text-gray-500 font-medium">
             {review.title}, {review.company}
           </p>
@@ -117,34 +117,29 @@ function ReviewCard({ review }: { review: Review }) {
 
 export function ReviewsSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-white py-20 md:py-28">
+    <section className="relative overflow-hidden bg-white py-12 md:py-20">
       <div className="container mx-auto px-4 max-w-7xl">
-        {/* Top Section - Statistics and CTAs */}
+        {/* Top Section - Statistics */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12 md:mb-16"
+          className="mb-10 md:mb-14 text-center"
         >
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12">
-            {/* Left Side - Statistics */}
-            <div className="flex flex-col w-full md:w-auto">
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-primary mb-4 tracking-tight">
-                550+
-              </h2>
-              <p className="text-xl md:text-4xl font-semibold text-gray-900 leading-tight">
-                Reviews from Industry Leaders
-              </p>
-            </div>
-
-           
+          <div className="bg-gray-50 rounded-3xl md:rounded-[3rem] p-8 md:p-12 lg:p-16">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-primary mb-4 tracking-tight">
+              550+
+            </h2>
+            <p className="text-xl md:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight">
+              Reviews from Industry Leaders
+            </p>
           </div>
         </motion.div>
 
         {/* Reviews Grid/Carousel */}
         {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-3 gap-4">
+        <div className="hidden md:grid md:grid-cols-3 gap-5 md:gap-6">
           {reviews.map((review, index) => (
             <motion.div
               key={review.id}

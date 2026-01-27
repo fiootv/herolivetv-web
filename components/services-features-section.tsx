@@ -158,7 +158,7 @@ export function ServicesFeaturesSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="relative h-full min-h-[500px] flex flex-col justify-between  bg-primary border border-primary p-6 md:p-8 transition-colors duration-200 overflow-hidden">
+              <div className="relative h-full min-h-[500px] flex flex-col justify-between bg-primary border border-primary p-6 md:p-8 transition-colors duration-200 overflow-hidden rounded-2xl md:rounded-3xl">
                 {/* Icon at the top */}
                 <div className="flex">
                   <service.icon className="w-16 h-16 md:w-20 md:h-20 text-white" strokeWidth={1} />
@@ -175,7 +175,7 @@ export function ServicesFeaturesSection() {
                 </div>
 
                 {/* Hover Overlay with Features */}
-                <div className="absolute inset-0 bg-white border border-primary p-6 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 overflow-y-auto">
+                <div className="absolute inset-0 bg-white border border-primary p-6 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 overflow-y-auto rounded-2xl md:rounded-3xl">
                   <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6">
                     {service.title}
                   </h3>

@@ -51,7 +51,7 @@ const benefits = [
 
 export function WhyChooseSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-white py-20 md:py-28">
+    <section className="relative overflow-hidden bg-white py-12 md:py-20">
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         {/* Title */}
         <motion.div
@@ -59,16 +59,16 @@ export function WhyChooseSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-left mb-16 md:mb-20"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-6xl font-semibold text-left mb-6 text-gray-900 px-4 max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold mb-4 md:mb-6 text-gray-900 max-w-4xl mx-auto">
             Why Choose{" "}
             <span className="text-primary">HeroLiveTV</span>?
           </h2>
         </motion.div>
 
-        {/* Benefits Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        {/* Benefits Grid with rounded corners */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
@@ -78,7 +78,7 @@ export function WhyChooseSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="relative h-full bg-gray-50 border border-gray-200 p-6 md:p-8 flex flex-col hover:border-primary transition-colors duration-200 overflow-hidden">
+              <div className="relative h-full bg-gray-50 border border-gray-200 p-6 md:p-8 flex flex-col hover:border-primary transition-colors duration-200 overflow-hidden rounded-2xl md:rounded-3xl">
                 {/* Background number */}
                 <div className="absolute top-4 right-4 text-primary/5 font-bold text-7xl md:text-8xl leading-none select-none pointer-events-none">
                   {benefit.number}
@@ -86,7 +86,7 @@ export function WhyChooseSection() {
 
                 {/* Icon */}
                 <div className="relative z-10 mb-6 text-primary">
-                  <benefit.icon className="w-10 h-10" />
+                  <benefit.icon className="w-10 h-10 md:w-12 md:h-12" />
                 </div>
 
                 {/* Heading */}

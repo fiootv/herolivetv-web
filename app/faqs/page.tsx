@@ -118,7 +118,7 @@ export default function FAQsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-white border border-gray-200 overflow-hidden hover:border-primary transition-colors duration-200"
+                className="bg-white border border-gray-200 overflow-hidden hover:border-primary transition-colors duration-200 rounded-xl md:rounded-2xl"
               >
                 {/* Question */}
                 <button
@@ -173,7 +173,7 @@ export default function FAQsPage() {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-4 text-base font-semibold transition-colors duration-200"
+            className="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-4 text-base font-semibold transition-colors duration-200 rounded-2xl"
           >
             Contact Us
           </a>

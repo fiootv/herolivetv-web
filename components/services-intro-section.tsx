@@ -4,15 +4,16 @@ import { motion } from "motion/react";
 
 export function ServicesIntroSection() {
   return (
-    <section className="relative overflow-hidden py-16 md:py-24 bg-white">
+    <section className="relative overflow-hidden py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
-        >
+        <div className="bg-gray-50 rounded-3xl md:rounded-[3rem] p-8 md:p-12 lg:p-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto text-center"
+          >
           {/* Subheading */}
           <p className="text-gray-600 text-sm md:text-base font-semibold uppercase tracking-wider mb-4">
             ONLY ENTERTAINMENT!!
@@ -31,6 +32,7 @@ export function ServicesIntroSection() {
             HeroLiveTV the perfect choice for your streaming needs.
           </p>
         </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -7,10 +7,10 @@ import Link from "next/link";
 
 export function ServicesFinalCTASection() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28 bg-primary">
-
+    <section className="relative overflow-hidden py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="bg-primary rounded-3xl md:rounded-[3rem] overflow-hidden p-8 md:p-12 lg:p-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -30,7 +30,7 @@ export function ServicesFinalCTASection() {
               <Link href="/billing">
                 <Button
                   size="lg"
-                  className="bg-white hover:bg-gray-100 text-primary px-8 py-6 font-semibold text-base md:text-lg flex items-center gap-2 transition-colors duration-200"
+                  className="bg-white hover:bg-gray-100 text-primary px-8 py-6 font-semibold text-base md:text-lg flex items-center gap-2 transition-colors duration-200 rounded-2xl"
                 >
                   Recharge Now
                   <ArrowRight className="w-5 h-5" />
@@ -40,7 +40,7 @@ export function ServicesFinalCTASection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-transparent border border-white text-white hover:bg-white hover:text-primary px-8 py-6 font-semibold text-base md:text-lg flex items-center gap-2 transition-colors duration-200"
+                  className="bg-transparent border border-white text-white hover:bg-white hover:text-primary px-8 py-6 font-semibold text-base md:text-lg flex items-center gap-2 transition-colors duration-200 rounded-2xl"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5" />
@@ -57,8 +57,8 @@ export function ServicesFinalCTASection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative border border-white/20 overflow-hidden">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
+            <div className="relative border border-white/20 overflow-hidden rounded-2xl md:rounded-3xl">
+              <div className="aspect-[4/3] bg-primary/80 flex items-center justify-center">
                 <div className="text-white text-center p-8">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
                     <svg
@@ -86,6 +86,7 @@ export function ServicesFinalCTASection() {
               </div>
             </div>
           </motion.div>
+          </div>
         </div>
       </div>
     </section>
