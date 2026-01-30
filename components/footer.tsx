@@ -1,36 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
-  Mail,
-  Phone,
-  ArrowRight
-} from "lucide-react";
+import { Facebook, Mail, Phone, ArrowRight } from "lucide-react";
 
 export function Footer() {
-  // Use static year - Next.js doesn't allow new Date() in client components during build
-  // The year will be updated annually or can be set to current year manually
-  const currentYear = 2025;
+  const currentYear = 2026;
 
   const footerLinks = {
     company: [
-      { href: "/about", label: "About Us" },
       { href: "/contact", label: "Contact" },
-      { href: "/careers", label: "Careers" },
-      { href: "/blog", label: "Blog" },
-    ],
-    support: [
+      { href: "/services", label: "Services" },
       { href: "/faqs", label: "FAQs" },
-      { href: "/support", label: "Support Portal" },
-      { href: "/help", label: "Help Center" },
-      { href: "/troubleshooting", label: "Troubleshooting" },
     ],
     legal: [
       { href: "/privacy-policy", label: "Privacy Policy" },
@@ -39,14 +21,16 @@ export function Footer() {
     ],
     resources: [
       { href: "/download", label: "Download" },
-      { href: "/devices", label: "Supported Devices" },
-      { href: "/pricing", label: "Pricing Plans" },
-      { href: "/billing", label: "Billing Login" },
+      { href: "/pricing", label: "Pricing" },
     ],
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61582801749446", label: "Facebook" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/p/fiootv-100089953960081/",
+      label: "Facebook",
+    },
   ];
 
   return (
@@ -58,7 +42,7 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-primary border border-primary p-8 md:p-12 mb-12 md:mb-16 text-center rounded-3xl md:rounded-[3rem]"
+          className="bg-primary border border-primary p-8 md:p-12 mb-12 md:mb-16 text-center"
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
@@ -82,60 +66,17 @@ export function Footer() {
 
         {/* Main Footer Content */}
         <div className="pb-12 md:pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 md:gap-12">
             {/* Brand Column */}
             <div className="lg:col-span-2">
               <Link href="/" className="inline-block mb-4">
-                <Image
-                  src="/logo.png"
-                  alt="HeroLiveTV"
-                  width={200}
-                  height={60}
-                  className="h-10 md:h-12 w-auto"
-                />
+                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                  <span className="font-normal">fioo</span>tv
+                </h2>
               </Link>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Your ultimate entertainment destination. Stream movies, series, documentaries, and more in multiple languages with HeroLiveTV.
+              <p className="text-gray-400 leading-relaxed">
+                Your ultimate entertainment destination. Stream movies, series, documentaries, and more in multiple languages with fiootv.
               </p>
-
-              {/* Contact Info */}
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                  <a
-                    href="mailto:support@herolivetv.com"
-                    className="hover:text-primary transition-colors"
-                  >
-                    support@herolivetv.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                  <a
-                    href="tel:+17168003757"
-                    className="hover:text-primary transition-colors"
-                  >
-                    +1-716-800-3757
-                  </a>
-                </div>
-              </div>
-
-              {/* Social Media Links */}
-              <div className="flex items-center gap-4">
-                {socialLinks.map((social) => {
-                  const Icon = social.icon;
-                  return (
-                    <a
-                      key={social.label}
-                      href={social.href}
-                      aria-label={social.label}
-                      className="w-10 h-10 bg-gray-800 border border-gray-700 hover:bg-primary hover:border-primary flex items-center justify-center transition-colors duration-200 group rounded-xl"
-                    >
-                      <Icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-                    </a>
-                  );
-                })}
-              </div>
             </div>
 
             {/* Company Links */}
@@ -143,23 +84,6 @@ export function Footer() {
               <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="hover:text-primary transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Support Links */}
-            <div>
-              <h3 className="text-white font-semibold text-lg mb-4">Support</h3>
-              <ul className="space-y-3">
-                {footerLinks.support.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -205,6 +129,46 @@ export function Footer() {
                 ))}
               </ul>
             </div>
+
+            {/* Contact - last column */}
+            <div className="lg:col-span-2">
+              <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
+              <div className="space-y-3 mb-4">
+                <div className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                  <a
+                    href="mailto:support@fiootv.com"
+                    className="hover:text-primary transition-colors"
+                  >
+                    support@fiootv.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                  <a
+                    href="tel:+18555614578"
+                    className="hover:text-primary transition-colors"
+                  >
+                    +1-855-561-4578
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      aria-label={social.label}
+                      className="w-10 h-10 bg-gray-800 border border-gray-700 hover:bg-primary hover:border-primary flex items-center justify-center transition-colors duration-200 group"
+                    >
+                      <Icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -214,7 +178,7 @@ export function Footer() {
         <div className="container mx-auto px-4 max-w-7xl py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} HeroLiveTV. All rights reserved.
+              © {currentYear} fiootv. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm">
               <Link
