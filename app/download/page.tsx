@@ -107,11 +107,18 @@ export default function DownloadPage() {
 
                 {/* Download Button - Fixed to bottom */}
                 <Button
-                  className="w-full bg-gray-900 hover:bg-primary text-white py-6 text-base font-semibold transition-colors duration-200 flex items-center justify-center gap-2 rounded-xl"
-                  onClick={() => window.open(platform.url, '_blank')}
+                  asChild
+                  className="w-full bg-gray-900 hover:bg-primary text-white py-6 text-base font-semibold transition-colors duration-200 flex items-center justify-center gap-2 rounded-xl cursor-pointer"
                 >
-                  <Download className="w-5 h-5" />
-                  {platform.label}
+                  <a
+                    href={platform.url}
+                    download={platform.name === "STB" ? "stb.apk" : undefined}
+                    target={platform.url.startsWith("http") ? "_blank" : undefined}
+                    rel={platform.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                  >
+                    <Download className="w-5 h-5" />
+                    {platform.label}
+                  </a>
                 </Button>
               </motion.div>
             );
