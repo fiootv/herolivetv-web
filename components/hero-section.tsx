@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { fetchPopularMovies, fetchNowPlayingMovies, fetchTopRatedMovies, getPosterUrl } from "@/lib/tmdb";
+import { fetchPopularMovies, fetchNowPlayingMovies, fetchTopRatedMovies, getPosterUrl } from "@/lib/omdb";
 
 // Number of movies per slider
 const MOVIES_PER_SLIDER = 10;
@@ -45,6 +45,7 @@ function HorizontalSlider({
                   className="object-cover"
                   loading="lazy"
                   sizes="(max-width: 768px) 90px, 130px"
+                  unoptimized
                 />
               </div>
             ) : (
@@ -60,9 +61,11 @@ function HorizontalSlider({
 export function HeroSection() {
   const [slider1Movies, setSlider1Movies] = useState<MoviePoster[]>([]);
   const [slider2Movies, setSlider2Movies] = useState<MoviePoster[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function loadMovies() {
+      setError(null);
       try {
         // Fetch multiple pages to ensure we have enough movies with posters
         const [popular1, popular2, nowPlaying1, nowPlaying2, topRated1, topRated2] = await Promise.all([
@@ -100,11 +103,14 @@ export function HeroSection() {
         // Set movies for each slider
         setSlider1Movies(popularWithPosters);
         setSlider2Movies(combinedForSlider2);
-      } catch (error) {
-        console.error('Failed to load movies for hero section:', error);
-        // Fallback to empty arrays
+        if (popularWithPosters.length === 0 && combinedForSlider2.length === 0) {
+          setError("Movies could not be loaded. Check that NEXT_PUBLIC_OMDB_API_KEY is set in .env.local.");
+        }
+      } catch (err) {
+        console.error('Failed to load movies for hero section:', err);
         setSlider1Movies([]);
         setSlider2Movies([]);
+        setError("Couldn't load movies. Please try again later.");
       }
     }
 
@@ -146,23 +152,32 @@ export function HeroSection() {
 
           {/* Bottom Section - Two Horizontal Sliders */}
           <div className="space-y-6 md:space-y-8">
-            {/* Slider 1 */}
-            <div className="relative overflow-hidden rounded-xl md:rounded-2xl">
-              <HorizontalSlider 
-                movies={slider1Movies.length > 0 ? slider1Movies : Array(MOVIES_PER_SLIDER).fill({ poster_path: null, id: 0 })} 
-                direction="left" 
-                duration={40} 
-              />
-            </div>
-            
-            {/* Slider 2 */}
-            <div className="relative overflow-hidden rounded-xl md:rounded-2xl">
-              <HorizontalSlider 
-                movies={slider2Movies.length > 0 ? slider2Movies : Array(MOVIES_PER_SLIDER).fill({ poster_path: null, id: 0 })} 
-                direction="right" 
-                duration={50} 
-              />
-            </div>
+            {error ? (
+              <div className="flex flex-col items-center justify-center min-h-[200px] text-center px-4 py-8 rounded-xl md:rounded-2xl bg-gray-800/50">
+                <p className="text-red-400 font-medium mb-2">Something went wrong</p>
+                <p className="text-white/70 text-sm md:text-base max-w-md">{error}</p>
+              </div>
+            ) : (
+              <>
+                {/* Slider 1 */}
+                <div className="relative overflow-hidden rounded-xl md:rounded-2xl">
+                  <HorizontalSlider 
+                    movies={slider1Movies.length > 0 ? slider1Movies : Array(MOVIES_PER_SLIDER).fill({ poster_path: null, id: 0 })} 
+                    direction="left" 
+                    duration={40} 
+                  />
+                </div>
+                
+                {/* Slider 2 */}
+                <div className="relative overflow-hidden rounded-xl md:rounded-2xl">
+                  <HorizontalSlider 
+                    movies={slider2Movies.length > 0 ? slider2Movies : Array(MOVIES_PER_SLIDER).fill({ poster_path: null, id: 0 })} 
+                    direction="right" 
+                    duration={50} 
+                  />
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
