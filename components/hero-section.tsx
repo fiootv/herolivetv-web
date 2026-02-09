@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { fetchPopularMovies, fetchNowPlayingMovies, fetchTopRatedMovies, getPosterUrl } from "@/lib/omdb";
+import { fetchPopularMovies, getPosterUrl } from "@/lib/omdb";
 
 // Number of movies per slider
 const MOVIES_PER_SLIDER = 10;
@@ -12,6 +12,26 @@ const MOVIES_PER_SLIDER = 10;
 interface MoviePoster {
   poster_path: string | null;
   id: number;
+}
+
+/** Poster image with fallback when load fails (broken URL, 403, etc.) */
+function PosterImage({ src, alt }: { src: string; alt: string }) {
+  const [failed, setFailed] = useState(false);
+  if (!src || failed) {
+    return <div className="absolute inset-0 bg-gray-800" />;
+  }
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      className="object-cover"
+      loading="lazy"
+      sizes="(max-width: 768px) 90px, 130px"
+      unoptimized
+      onError={() => setFailed(true)}
+    />
+  );
 }
 
 function HorizontalSlider({ 
@@ -35,22 +55,14 @@ function HorizontalSlider({
         }}
       >
         {duplicatedMovies.map((movie, index) => (
-          <div key={`${movie.id || 'placeholder'}-${index}`} className="relative group flex-shrink-0">
-            {movie.poster_path ? (
-              <div className="relative w-[calc((100vw-4rem)/4-0.5rem)] md:w-[calc((100vw-10rem)/10-0.75rem)] lg:w-[calc(1450px/10-2.5rem)] max-w-[130px] aspect-[2/3] overflow-hidden rounded-lg md:rounded-xl">
-                <Image
-                  src={getPosterUrl(movie.poster_path)}
-                  alt="Movie poster"
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 90px, 130px"
-                  unoptimized
-                />
-              </div>
-            ) : (
-              <div className="relative w-[calc((100vw-4rem)/4-0.5rem)] md:w-[calc((100vw-10rem)/10-0.75rem)] lg:w-[calc(1450px/10-2.5rem)] max-w-[130px] aspect-[2/3] bg-gray-800 rounded-lg md:rounded-xl" />
-            )}
+          <div key={`${movie.id || "placeholder"}-${index}`} className="relative group flex-shrink-0">
+            <div className="relative w-[calc((100vw-4rem)/4-0.5rem)] md:w-[calc((100vw-10rem)/10-0.75rem)] lg:w-[calc(1450px/10-2.5rem)] max-w-[130px] aspect-[2/3] overflow-hidden rounded-lg md:rounded-xl">
+              {movie.poster_path ? (
+                <PosterImage src={getPosterUrl(movie.poster_path)} alt="Movie poster" />
+              ) : (
+                <div className="absolute inset-0 bg-gray-800" />
+              )}
+            </div>
           </div>
         ))}
       </div>
@@ -67,47 +79,30 @@ export function HeroSection() {
     async function loadMovies() {
       setError(null);
       try {
-        // Fetch multiple pages to ensure we have enough movies with posters
-        const [popular1, popular2, nowPlaying1, nowPlaying2, topRated1, topRated2] = await Promise.all([
+        // Single pool from multiple pages so both sliders are always filled
+        const [page1, page2, page3] = await Promise.all([
           fetchPopularMovies(1),
           fetchPopularMovies(2),
-          fetchNowPlayingMovies(1),
-          fetchNowPlayingMovies(2),
-          fetchTopRatedMovies(1),
-          fetchTopRatedMovies(2),
+          fetchPopularMovies(3),
         ]);
 
-        // Combine and filter movies that have posters
-        const allPopular = [...popular1, ...popular2];
-        const allNowPlaying = [...nowPlaying1, ...nowPlaying2];
-        const allTopRated = [...topRated1, ...topRated2];
+        const seen = new Set<number>();
+        const pool: MoviePoster[] = [];
+        for (const m of [...page1, ...page2, ...page3]) {
+          if (pool.length >= MOVIES_PER_SLIDER * 2) break;
+          if (seen.has(m.id)) continue;
+          seen.add(m.id);
+          pool.push({ poster_path: m.poster_path, id: m.id });
+        }
 
-        // Get first slider movies from popular
-        const popularWithPosters = allPopular
-          .filter(m => m.poster_path)
-          .slice(0, MOVIES_PER_SLIDER)
-          .map(m => ({ poster_path: m.poster_path, id: m.id }));
-        
-        // Get IDs from first slider to avoid duplicates
-        const slider1Ids = new Set(popularWithPosters.map(m => m.id));
-        
-        // Combine now playing and top rated, excluding movies from slider 1
-        const combinedForSlider2 = [...allNowPlaying, ...allTopRated]
-          .filter(m => m.poster_path && !slider1Ids.has(m.id))
-          .slice(0, MOVIES_PER_SLIDER)
-          .map(m => ({ poster_path: m.poster_path, id: m.id }));
+        setSlider1Movies(pool.slice(0, MOVIES_PER_SLIDER));
+        setSlider2Movies(pool.slice(MOVIES_PER_SLIDER, MOVIES_PER_SLIDER * 2));
 
-        console.log('Slider 1 movies loaded:', popularWithPosters.length);
-        console.log('Slider 2 movies loaded:', combinedForSlider2.length);
-
-        // Set movies for each slider
-        setSlider1Movies(popularWithPosters);
-        setSlider2Movies(combinedForSlider2);
-        if (popularWithPosters.length === 0 && combinedForSlider2.length === 0) {
+        if (pool.length === 0) {
           setError("Movies could not be loaded. Check that NEXT_PUBLIC_OMDB_API_KEY is set in .env.local.");
         }
       } catch (err) {
-        console.error('Failed to load movies for hero section:', err);
+        console.error("Failed to load movies for hero section:", err);
         setSlider1Movies([]);
         setSlider2Movies([]);
         setError("Couldn't load movies. Please try again later.");
